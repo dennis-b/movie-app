@@ -12,7 +12,7 @@ export const Root: any = styled.div`
   flex-direction: column;
   align-items: ${({ align }: any) => align || 'initial'};
   justify-content:  ${({ justify }: any) => justify || 'initial'};
-  background-color: #F5F5F5;
+  background-color: rgba(245,245,245,0.22);
   overflow-x: auto;
 `;
 

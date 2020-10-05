@@ -4,7 +4,10 @@ import { CircularProgress } from "@material-ui/core";
 
 export function AppLoader() {
     return (
-        <Root justify="center" align="center">
+        <Root
+            justify="center"
+            align="center"
+        >
             <CircularProgress color={"primary"} />
         </Root>
     )
