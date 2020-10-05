@@ -1,5 +1,3 @@
-import React from "react";
-
 export const AppTheme = {
     colors: {
         blue: '#2288EE',

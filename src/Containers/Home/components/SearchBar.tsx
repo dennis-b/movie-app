@@ -37,13 +37,16 @@ const SearchBarView = ({ homeStore }: WithHomeStore) => {
             if (homeStore.page !== 1 && homeStore.hasMore) {
                 refetch()
             }
+            // eslint-disable-next-line
         }, [homeStore.page])
+
 
         useEffect(() => {
             if (homeStore.error) {
                 notifyError({ message: homeStore.error })
                 homeStore.setError(null)
             }
+            // eslint-disable-next-line
         }, [homeStore.error])
 
 
