@@ -11,7 +11,10 @@ import { CircularProgress } from "@material-ui/core";
 
 export const ContentView = ({ homeStore }: WithHomeStore) => {
 
-    const fetchMoreData = () => homeStore.setPage(homeStore.page + 1)
+    const fetchMoreData = () => {
+        console.log('====')
+        homeStore.setPage(homeStore.page + 1)
+    }
 
     return (
         <StContainer p={1} display='flex' justify='center'>
@@ -19,7 +22,6 @@ export const ContentView = ({ homeStore }: WithHomeStore) => {
                 dataLength={homeStore.videos.length}
                 next={fetchMoreData}
                 hasMore={homeStore.hasMore}
-                height={600}
                 loader={<CircularProgress />}
             >
                 <VideoList videos={homeStore.videos} />

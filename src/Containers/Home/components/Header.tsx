@@ -15,7 +15,7 @@ export const Header = () => {
             <StText
                 size={AppTheme.fontSizes.largeX2}
                 weight={'bold'}
-                textcolor={AppTheme.colors.blueDark}
+                textcolor={AppTheme.colors.input}
             >
                 Movie search application
             </StText>

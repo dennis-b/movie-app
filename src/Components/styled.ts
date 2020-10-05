@@ -13,7 +13,6 @@ export const Root: any = styled.div`
   align-items: ${({ align }: any) => align || 'initial'};
   justify-content:  ${({ justify }: any) => justify || 'initial'};
   background-color: rgba(245,245,245,0.22);
-  overflow-x: auto;
 `;
 
 

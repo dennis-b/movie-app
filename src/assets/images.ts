@@ -11,4 +11,5 @@ export const AppImages = {
     Edit: require('./images/pencil.svg'),
     Close: require('./images/close.svg'),
     Done: require('./images/tick.svg'),
+    Video: require('./images/app-store-video.jpg'),
 };
