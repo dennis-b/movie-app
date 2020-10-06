@@ -7,6 +7,7 @@ import { inject, observer } from "mobx-react";
 import { homeStoreSelector, WithHomeStore } from "../../HomeStore";
 import { StInfiniteScroll } from "../styled";
 import { CircularProgress } from "@material-ui/core";
+import { Total } from "./Total";
 
 
 export const ContentView = ({ homeStore }: WithHomeStore) => {
@@ -21,6 +22,7 @@ export const ContentView = ({ homeStore }: WithHomeStore) => {
                 hasMore={homeStore.hasMore}
                 loader={<CircularProgress />}
             >
+                <Total total={homeStore.total} />
                 <VideoList videos={homeStore.videos} />
             </StInfiniteScroll>
 

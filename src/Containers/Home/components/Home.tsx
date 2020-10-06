@@ -66,7 +66,7 @@ const HomeView = ({ homeStore }: WithHomeStore) => {
                 title={title}
                 year={year}
             />
-            <StContainer position="relative" p={1}>
+            <StContainer position="relative">
                 <Content />
             </StContainer>
         </StContainer>
