@@ -1,35 +1,20 @@
 import React from 'react';
-import { Card, CardContent, CardMedia, createStyles, Theme, Typography } from "@material-ui/core";
+import { CardContent, Typography } from "@material-ui/core";
 import { StGrid, StText } from "../../../../Components";
 import { AppTheme } from "../../../../assets/theme";
 import { Video } from "../../models";
-import { makeStyles } from "@material-ui/core/styles";
 import { AppImages } from "../../../../assets";
+import { StCard, StCardMedia } from "./styled";
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        root: {
-            height: 240,
-            maxWidth: 400,
-        },
-        media: {
-            height: 140,
-        },
-    }),
-);
-
+const NO_POSTER = 'N/A'
 
 export const VideoItem: any = ({ video }: { video: Video }) => {
-    const classes = useStyles();
     const { Title, Type, Year, Poster } = video;
 
     return (
         <StGrid item xs={6}>
-            <Card className={classes.root}>
-                <CardMedia
-                    className={classes.media}
-                    image={Poster === 'N/A' ? AppImages.Video : Poster}
-                />
+            <StCard>
+                <StCardMedia image={Poster === NO_POSTER ? AppImages.Video : Poster} />
                 <CardContent>
                     <StText textcolor={AppTheme.colors.lightBlue}>
                         {Title}
@@ -38,7 +23,7 @@ export const VideoItem: any = ({ video }: { video: Video }) => {
                         {Type} - {Year}
                     </Typography>
                 </CardContent>
-            </Card>
+            </StCard>
         </StGrid>
     );
 };
