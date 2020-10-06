@@ -11,10 +11,7 @@ import { CircularProgress } from "@material-ui/core";
 
 export const ContentView = ({ homeStore }: WithHomeStore) => {
 
-    const fetchMoreData = () => {
-        console.log('====')
-        homeStore.setPage(homeStore.page + 1)
-    }
+    const fetchMoreData = () => homeStore.setPage(homeStore.page + 1);
 
     return (
         <StContainer p={1} display='flex' justify='center'>
